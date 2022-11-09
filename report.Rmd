@@ -18,14 +18,14 @@ We are going to use the following library:
 ```{r loading-libs, message=FALSE}
 library(tidyverse)
 ```
-  
+
 and load the data we already wrangled:
 
 ```{r}
 load("rda/murders.rda")
 ```
 
-## Murder rate by state 
+## Murder rate by state
 
 We note the large state to state variability by generating a barplot showing the murder rate by state:
 
@@ -35,7 +35,6 @@ murders %>% mutate(abb = reorder(abb, rate)) %>%
   geom_bar(width = 0.5, stat = "identity", color = "red") +
   coord_flip()
 ```
-
 
 ## Including Plots
 
